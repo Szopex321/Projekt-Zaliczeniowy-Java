@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane prefWidth="480" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.controller.dialog.VehicleDialogController">
+    <headerText>Szczegóły pojazdu</headerText>
+    <content>
+        <GridPane hgap="10" vgap="10">
+            <padding><Insets bottom="10" left="20" right="20" top="20" /></padding>
+            <Label text="Typ Pojazdu:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <ChoiceBox fx:id="vehicleTypeChoiceBox" prefWidth="280.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label text="Marka:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="makeField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Model:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="modelField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Rok Produkcji:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="yearField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Nr. Rejestracyjny:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextField fx:id="regNumField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+            <Label fx:id="doorsLabel" text="Liczba Drzwi:" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <TextField fx:id="doorsField" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="bodyTypeLabel" text="Typ Nadwozia:" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <TextField fx:id="bodyTypeField" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+            <Label fx:id="engineCapLabel" text="Pojemność Silnika (cm^3):" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <TextField fx:id="engineCapField" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="motorTypeLabel" text="Typ Motocykla:" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <TextField fx:id="motorTypeField" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+            <columnConstraints><ColumnConstraints prefWidth="150.0" /><ColumnConstraints hgrow="ALWAYS" /></columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+    </content>
+    <buttonTypes>
+        <ButtonType fx:id="saveButton" buttonData="OK_DONE" text="Zapisz" />
+        <ButtonType buttonData="CANCEL_CLOSE" text="Anuluj" />
+    </buttonTypes>
+</DialogPane>

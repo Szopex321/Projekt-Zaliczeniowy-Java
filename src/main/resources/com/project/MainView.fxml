@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.controller.MainViewController">
+    <top>
+        <VBox>
+            <ToolBar prefHeight="40.0">
+                <items>
+                    <Label text="System Zażądzania Flotą Pojazdów">
+                        <font>
+                            <Font name="System Bold" size="16.0" />
+                        </font>
+                    </Label>
+                    <Pane HBox.hgrow="ALWAYS" />
+                    <Label fx:id="currentUserLabel" text="Urzytkownik: Gość" />
+                    <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogout" text="Wyloguj" />
+                </items>
+                <VBox.margin>
+                    <Insets bottom="5.0" />
+                </VBox.margin>
+            </ToolBar>
+        </VBox>
+    </top>
+    <center>
+        <TabPane fx:id="mainTabPane" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="vehicleTab" text="Pojazdy">
+                </Tab>
+                <Tab fx:id="usersTab" text="Urzytkownicy">
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>
